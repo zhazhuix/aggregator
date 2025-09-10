@@ -1,0 +1,158 @@
+{
+  "domains": [
+    {
+      "name": "纯爬虫",
+      "sub": [],
+      "domain": "",
+      "enable": false,
+      "rename": "",
+      "include": "",
+      "exclude": "",
+      "push_to": [],
+      "ignorede": true,
+      "liveness": true,
+      "rate": 2.5,
+      "count": 2,
+      "coupon": "",
+      "secure": false
+    }
+  ],
+  "plan_id": 3,
+  "package": "",
+  "method": 1,
+  "coupon_code": "",
+  "chatgpt": {
+    "enable": false,
+    "regex": "",
+    "operate": "IN"
+  },
+  "crawl": {
+    "enable": true,
+    "exclude": "",
+    "threshold": 5,
+    "singlelink": true,
+    "persist": {
+      "subs": "crawledsubs",
+      "proxies": "crawledproxies"
+    },
+    "config": {
+      "rename": "🌐 {name}",
+      "include": "",         
+      "exclude": "测试|过期"     
+    },
+    "telegram": {
+      "enable": true,
+      "pages": 6,
+      "exclude": "",
+      "users": {
+        "go4sharing": {
+          "include": "机场,clash,订阅,节点,proxy,科学上网,v2ray,vless,trojan,socks5,ssr,白嫖",
+          "exclude": "试用,免费,测试,失效,过期,广告,推广,加群",
+          "config": {
+            "rename": "TG机场源-go4sharing"
+          },
+          "push_to": ["12-clash"]
+        },
+        "ZYFXS001": {
+          "include": "机场,clash,订阅,节点,proxy,科学上网,v2ray,vless,trojan,socks5,ssr,白嫖",
+          "exclude": "试用,免费,测试,失效,过期,广告,推广,加群",
+          "config": {
+            "rename": "TG机场源-ZYFXS001"
+          },
+          "push_to": ["12-clash"]
+        },
+        "vpnfail_v2ray": {
+          "include": "机场,clash,订阅,节点,proxy,科学上网,v2ray,vless,trojan,socks5,ssr,白嫖",
+          "exclude": "试用,免费,测试,失效,过期,广告,推广,加群",
+          "config": {
+            "rename": "TG机场源-vpnfail"
+          },
+          "push_to": ["12-clash"]
+        },
+        "白嫖机场": {
+          "include": "机场,clash,订阅,节点,proxy,科学上网,v2ray,vless,trojan,socks5,ssr,白嫖",
+          "exclude": "试用,免费,测试,失效,过期,广告,推广,加群",
+          "config": {
+            "rename": "TG机场源-白嫖机场"
+          },
+          "push_to": ["12-clash"]
+        }
+      }
+    },
+    "github": {
+      "enable": true,
+      "pages": 3,
+      "push_to": ["12-clash"],
+      "exclude": "test|demo|example",
+      "spams": ["spam-repo", "fake-proxy"]
+    },
+    "google": {
+      "enable": false,
+      "exclude": "spam|blocked",
+      "limits": 50,
+      "notinurl": ["spam.com", "blocked.site"],
+      "push_to": ["12-clash"]
+    },
+    "yandex": {
+      "enable": false,
+      "exclude": "spam",
+      "within": 7,
+      "pages": 3,
+      "notinurl": ["spam.com"],
+      "push_to": ["12-clash"]
+    },
+    "twitter": {
+      "enable": false,
+      "users": {}
+    },
+    "repositories": [],
+    "pages": [],
+    "scripts": []
+  },
+  "groups": {
+    "12-clash": {
+      "emoji": true,
+      "list": true,
+      "targets": {
+        "clash": "12-clash",
+        "singbox": "23-singbox",
+        "v2ray": "v2ray"
+      },
+      "regularize": {
+        "enable": true,
+        "locate": true,
+        "bits": 2
+      }
+    }
+  },
+  "storage": {
+    "engine": "gist",
+    "items": {
+      "12-clash": {
+        "username": "zhazhuix",
+        "gistid": "e18c2df07f1cc42b5f78cf4d13010d18",
+        "filename": "12-clash.yaml"
+      },
+      "23-singbox": {
+        "username": "zhazhuix",
+        "gistid": "e18c2df07f1cc42b5f78cf4d13010d18",
+        "filename": "23-singbox.yaml"
+      },
+      "v2ray": {
+        "username": "zhazhuix",
+        "gistid": "e18c2df07f1cc42b5f78cf4d13010d18",
+        "filename": "v2ray.yaml"
+      },
+      "crawledsubs": {
+        "username": "zhazhuix",
+        "gistid": "e18c2df07f1cc42b5f78cf4d13010d18",
+        "filename": "crawledsubs.yaml"
+      },
+      "crawledproxies": {
+        "username": "zhazhuix",
+        "gistid": "e18c2df07f1cc42b5f78cf4d13010d18",
+        "filename": "crawledproxies.yaml"
+      }
+    }
+  }
+}
